@@ -6,7 +6,8 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        library: 'redux-integration-store'
+        library: 'redux-integration-store',
+        libraryTarget: 'umd'
     },
     module: {
         rules: [{
