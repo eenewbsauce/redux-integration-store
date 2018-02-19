@@ -15,14 +15,7 @@ module.exports = {
             exclude: /node_modules/,
             use: ['babel-loader']
         }]
-    },
-    plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false,
-            }
-        })
-    ],
+    },    
     stats: {
         errors: true
     }
