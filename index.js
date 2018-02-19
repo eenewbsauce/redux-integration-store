@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 import sinon from 'sinon';
 
 function setupIntegrationTest(reducer, reducerKey) {
-    const dispatchSpy = sinon.stub();
+    const dispatchSpy = sinon.stub().callsFake(() => ({}));
     const reducerSpy = (state, action) => dispatchSpy(action);
     const combinedReducers = combineReducers({
         reducerSpy,
